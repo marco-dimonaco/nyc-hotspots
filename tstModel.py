@@ -1,7 +1,7 @@
 from model.model import Model
 
 mymodel = Model()
-mymodel.buildGraph("ALTICEUSA", 0.5)
+mymodel.buildGraph("AT&T", 2)
 print(mymodel.printGraphDetails())
 
 for tupla in mymodel.getMaxVicini():

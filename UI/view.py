@@ -47,6 +47,20 @@ class View(ft.UserControl):
                       alignment=ft.MainAxisAlignment.CENTER)
         self._page.controls.append(row2)
 
+        # ROW3
+        self._txtInStringa = ft.TextField(label="Stringa")
+        self._btnSetPercorso = ft.ElevatedButton(text="Calcola Percorso",
+                                                 on_click=self._controller.handleGetPercorso)
+        row3 = ft.Row([
+            ft.Container(self._txtInStringa, width=300),
+            ft.Container(self._btnSetPercorso, width=300)
+        ], alignment=ft.MainAxisAlignment.CENTER)
+        self._page.controls.append(row3)
+        self._ddTarget = ft.Dropdown(label="Target")
+        row4 = ft.Row([
+            ft.Container(self._ddTarget, width=300)])
+        self._page.controls.append(row4)
+
         # List View where the reply is printed
         self.txt_result = ft.ListView(expand=1, spacing=10, padding=20, auto_scroll=True)
         self._page.controls.append(self.txt_result)
